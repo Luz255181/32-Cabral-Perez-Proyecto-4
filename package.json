@@ -1,0 +1,21 @@
+{
+  "name": "proyecto-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.9.0",
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

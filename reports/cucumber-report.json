@@ -1,0 +1,1027 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-y-contraseña-vacíos-(log-01)",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Inicio de sesión con correo y contraseña vacíos (LOG-01)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 654832600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 937143100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "el usuario ingresa el correo \"\" y la contraseña \"\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1164926699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 576978400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "se debe mostrar el mensaje \"Por favor, completa ambos campos.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11699200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 137707300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-vacío-y-contraseña-válida-(log-02)",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Inicio de sesión con correo vacío y contraseña válida (LOG-02)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 434275800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 877664499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "el usuario ingresa el correo \"\" y la contraseña \"hermione2025\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1165020499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 557141999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "se debe mostrar el mensaje \"Por favor, completa ambos campos.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8421399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 106911200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-vacío-y-contraseña-inválida-(log-03)",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Inicio de sesión con correo vacío y contraseña inválida (LOG-03)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 506944900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 943092500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "el usuario ingresa el correo \"\" y la contraseña \"123\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1170041400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 562595600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "se debe mostrar el mensaje \"Por favor, completa ambos campos.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11338999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 74723500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-registrado-y-contraseña-vacía-(log-04)",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Inicio de sesión con correo registrado y contraseña vacía (LOG-04)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 451515299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 876912300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "el usuario ingresa el correo \"ron@hogwarts.com\" y la contraseña \"\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1144454200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 573317099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "se debe mostrar el mensaje \"Por favor, completa ambos campos.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8720199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 100639400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-exitoso-con-credenciales-válidas-(log-05)",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Inicio de sesión exitoso con credenciales válidas (LOG-05)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 594235399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 902039800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "el usuario ingresa el correo \"ron@hogwarts.com\" y la contraseña \"hermione2025\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1212524399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 641900300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "se debe mostrar el mensaje \"Acceso autorizado. Redirección a la página principal.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64070899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 132642800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-registrado-y-contraseña-incorrecta-(log-06)",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Inicio de sesión con correo registrado y contraseña incorrecta (LOG-06)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 467472799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 889872100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "el usuario ingresa el correo \"ron@hogwarts.com\" y la contraseña \"123\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1107543699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 561964700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "se debe mostrar el mensaje \"Usuario correcto, pero la contraseña es incorrecta.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11976299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 80404900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-no-registrado-y-contraseña-vacía-(log-07)",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "Inicio de sesión con correo no registrado y contraseña vacía (LOG-07)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 439457900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 938478200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "el usuario ingresa el correo \"vyvs@mail.com\" y la contraseña \"\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1148092999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 561581700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "se debe mostrar el mensaje \"Por favor, completa ambos campos.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6443500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 73601099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-no-registrado-y-contraseña-válida-(log-08)",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "Inicio de sesión con correo no registrado y contraseña válida (LOG-08)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 426373800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 46,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 926125599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "el usuario ingresa el correo \"vyvs@mail.com\" y la contraseña \"hermione2025\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1106134200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 559193999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "se debe mostrar el mensaje \"El usuario no es correcto.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6258900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 73783500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-no-registrado-y-contraseña-inválida-(log-09)",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "Inicio de sesión con correo no registrado y contraseña inválida (LOG-09)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 435386599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 949360500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "el usuario ingresa el correo \"vyvs@mail.com\" y la contraseña \"123\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1130698700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 546396600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "se debe mostrar el mensaje \"El usuario no es correcto.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6120200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 78671699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-de-formato-inválido-y-contraseña-vacía-(log-10)",
+        "keyword": "Scenario",
+        "line": 57,
+        "name": "Inicio de sesión con correo de formato inválido y contraseña vacía (LOG-10)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 424301399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 58,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 955181400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 59,
+            "name": "el usuario ingresa el correo \"harry.com\" y la contraseña \"\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1156039000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 543538999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "se debe mostrar el mensaje \"Por favor, completa ambos campos.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9401200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 97981299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-de-formato-inválido-y-contraseña-válida-(log-11)",
+        "keyword": "Scenario",
+        "line": 63,
+        "name": "Inicio de sesión con correo de formato inválido y contraseña válida (LOG-11)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 405498499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 64,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 910286900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "el usuario ingresa el correo \"harry.com\" y la contraseña \"hermione2025\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1120189500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 557517599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "se debe mostrar el mensaje \"Por favor, ingrese un correo electrónico válido.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7266500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 76203000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;inicio-de-sesión-con-correo-de-formato-inválido-y-contraseña-inválida-(log-12)",
+        "keyword": "Scenario",
+        "line": 69,
+        "name": "Inicio de sesión con correo de formato inválido y contraseña inválida (LOG-12)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 479470399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 70,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 896140899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 71,
+            "name": "el usuario ingresa el correo \"harry.com\" y la contraseña \"123\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1123759799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "presiona el botón de ingresar",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 561993300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 73,
+            "name": "se debe mostrar el mensaje \"Por favor, ingrese un correo electrónico válido.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6275399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 72801699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts;tres-intentos-fallidos-consecutivos-con-correo-registrado-(log-13)",
+        "keyword": "Scenario",
+        "line": 75,
+        "name": "Tres intentos fallidos consecutivos con correo registrado (LOG-13)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 450420300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 76,
+            "name": "el usuario navega a la página de inicio de sesión \"http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 883019099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 77,
+            "name": "el usuario ingresa el correo \"ron@hogwarts.com\" y la contraseña \"123\" 3 veces seguidas",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4833527699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "se debe mostrar el mensaje \"Usuario correcto, pero la contraseña es incorrecta.\"",
+            "match": {
+              "location": "tests\\steps\\loginSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8256300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 71602999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "autenticación-de-usuarios-en-la-obra-social-de-hogwarts",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Autenticación de usuarios en la Obra Social de Hogwarts",
+    "tags": [],
+    "uri": "tests\\features\\login.feature"
+  }
+]
