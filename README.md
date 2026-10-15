@@ -6,13 +6,14 @@ Este proyecto contiene la automatización de los casos de prueba `LOG-01` a `LOG
 
 ```
 .
-├── features/
-│   └── login.feature      # Escenarios en Gherkin (LOG-01 a LOG-13)
-├── steps/
-│   └── loginSteps.ts      # Definiciones de pasos con Playwright
-├── support/
-│   ├── world.ts           # Configuración de CustomWorld de Cucumber
-│   └── hooks.ts           # BeforeAll/AfterAll (Browser) y Before/After (Context/Page/Screenshots)
+├── test/
+│  └──features/
+│  │    └── login.feature      # Escenarios en Gherkin (LOG-01 a LOG-13)
+│  ├── steps/
+│  │   └── loginSteps.ts      # Definiciones de pasos con Playwright
+│  └── support/
+│     ├── world.ts           # Configuración de CustomWorld de Cucumber
+│     └── hooks.ts           # BeforeAll/AfterAll (Browser) y Before/After (Context/Page/Screenshots)
 ├── cucumber.json          # Configuración de Cucumber.js y generación de reportes
 ├── package.json           # Dependencias y scripts de NPM
 └── README.md              # Guía de instalación y ejecución
