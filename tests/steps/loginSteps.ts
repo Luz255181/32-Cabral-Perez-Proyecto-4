@@ -2,42 +2,41 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { CustomWorld } from '../support/world';
 
-Given('el usuario navega a la página de inicio de sesión {string}', async function (this: CustomWorld, url: string) {
-  await this.page.goto(url);
+Given('que el usuario navega a la página de inicio de sesión', async function (this: CustomWorld) {
+  await this.page.goto(this.baseUrl);
 });
 
 When('el usuario ingresa el correo {string} y la contraseña {string}', async function (this: CustomWorld, correo: string, pass: string) {
-  const emailInput = this.page.locator('#email, input[type="email"], input[name="email"], input[name="usuario"]').first();
-  const passInput = this.page.locator('#password, input[type="password"], input[name="password"], input[name="clave"]').first();
-
-  await emailInput.fill(correo);
-  await passInput.fill(pass);
+  await this.page.locator('#email').fill(correo);
+  await this.page.locator('#password').fill(pass);
 });
 
 When('presiona el botón de ingresar', async function (this: CustomWorld) {
-  const loginBtn = this.page.locator('#btn-login, button[type="submit"], input[type="submit"], button:has-text("Ingresar"), button:has-text("Login")').first();
-  await loginBtn.click();
+  await this.page.locator('button:has-text("Ingresar")').click();
 });
 
-Then('se debe mostrar el mensaje {string}', async function (this: CustomWorld, mensajeEsperado: string) {
-  if (mensajeEsperado.includes('Acceso autorizado')) {
-    await expect(this.page).toHaveURL(/.*(bienvenida).*/);
-  } else {
-    const selectorMensaje = '.mensaje-error, #mensaje, #error, alert, .alert, p.error, div.error';
-    const elemento = this.page.locator(selectorMensaje).first();
-    const textoObservado = await elemento.innerText();
-    expect(textoObservado).toContain(mensajeEsperado);
-  }
+Then('se debe mostrar el mensaje de error {string}', async function (this: CustomWorld, mensajeEsperado: string) {
+  const errorMessageLocator = this.page.locator('#error-message');
+  await expect(errorMessageLocator).toHaveText(mensajeEsperado);
+});
+
+Then('el usuario debería ser redirigido a la página de bienvenida', async function (this: CustomWorld) {
+  await expect(this.page).toHaveURL(/.*bienvenida.*/);
 });
 
 When('el usuario ingresa el correo {string} y la contraseña {string} {int} veces seguidas', async function (this: CustomWorld, correo: string, pass: string, intentos: number) {
-  const emailInput = this.page.locator('#email, input[type="email"], input[name="email"]').first();
-  const passInput = this.page.locator('#password, input[type="password"]').first();
-  const loginBtn = this.page.locator('#btn-login, button[type="submit"], input[type="submit"], button:has-text("Ingresar"), button:has-text("Login")').first();
+  const emailInput = this.page.locator('#email');
+  const passInput = this.page.locator('#password');
+  const loginBtn = this.page.locator('button:has-text("Ingresar")');
 
   for (let i = 0; i < intentos; i++) {
     await emailInput.fill(correo);
     await passInput.fill(pass);
     await loginBtn.click();
   }
+});
+
+Then('se debe mostrar el mensaje de advertencia de bloqueo {string}', async function (this: CustomWorld, mensajeEsperado: string) {
+  const warningMessageLocator = this.page.locator('#warning-message');
+  await expect(warningMessageLocator).toHaveText(mensajeEsperado);
 });
