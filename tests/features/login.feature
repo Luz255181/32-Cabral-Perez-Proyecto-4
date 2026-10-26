@@ -1,78 +1,33 @@
-Feature: Autenticación de usuarios en la Obra Social de Hogwarts
+# language: es
+Característica: Autenticación de usuarios en la Obra Social de Hogwarts
 
-  Scenario: Inicio de sesión con correo y contraseña vacíos (LOG-01)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "" y la contraseña ""
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Por favor, completa ambos campos."
+  Antecedentes:
+    Dado que el usuario navega a la página de inicio de sesión
 
-  Scenario: Inicio de sesión con correo vacío y contraseña válida (LOG-02)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "" y la contraseña "hermione2025"
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Por favor, completa ambos campos."
+  Esquema del escenario: Intentos de inicio de sesión con errores de validación o credenciales
+    Cuando el usuario ingresa el correo "<correo>" y la contraseña "<password>"
+    Y presiona el botón de ingresar
+    Entonces se debe mostrar el mensaje de error "<mensaje>"
 
-  Scenario: Inicio de sesión con correo vacío y contraseña inválida (LOG-03)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "" y la contraseña "123"
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Por favor, completa ambos campos."
+    Ejemplos:
+      | caso   | correo           | password     | mensaje                                            |
+      | LOG-01 |                  |              | Por favor, completa ambos campos.                  |
+      | LOG-02 |                  | hermione2025 | Por favor, completa ambos campos.                  |
+      | LOG-03 |                  | 123          | Por favor, completa ambos campos.                  |
+      | LOG-04 | ron@hogwarts.com |              | Por favor, completa ambos campos.                  |
+      | LOG-06 | ron@hogwarts.com | 123          | Usuario correcto, pero la contraseña es incorrecta. |
+      | LOG-07 | vyvs@mail.com    |              | Por favor, completa ambos campos.                  |
+      | LOG-08 | vyvs@mail.com    | hermione2025 | El usuario no es correcto.                         |
+      | LOG-09 | vyvs@mail.com    | 123          | El usuario no es correcto.                         |
+      | LOG-10 | harry.com        |              | Por favor, completa ambos campos.                  |
+      | LOG-11 | harry.com        | hermione2025 | Por favor, ingrese un correo electrónico válido.   |
+      | LOG-12 | harry.com        | 123          | Por favor, ingrese un correo electrónico válido.   |
 
-  Scenario: Inicio de sesión con correo registrado y contraseña vacía (LOG-04)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "ron@hogwarts.com" y la contraseña ""
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Por favor, completa ambos campos."
+  Escenario: Inicio de sesión exitoso con credenciales válidas (LOG-05)
+    Cuando el usuario ingresa el correo "ron@hogwarts.com" y la contraseña "hermione2025"
+    Y presiona el botón de ingresar
+    Entonces el usuario debería ser redirigido a la página de bienvenida
 
-  Scenario: Inicio de sesión exitoso con credenciales válidas (LOG-05)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "ron@hogwarts.com" y la contraseña "hermione2025"
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Acceso autorizado. Redirección a la página principal."
-
-  Scenario: Inicio de sesión con correo registrado y contraseña incorrecta (LOG-06)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "ron@hogwarts.com" y la contraseña "123"
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Usuario correcto, pero la contraseña es incorrecta."
-
-  Scenario: Inicio de sesión con correo no registrado y contraseña vacía (LOG-07)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "vyvs@mail.com" y la contraseña ""
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Por favor, completa ambos campos."
-
-  Scenario: Inicio de sesión con correo no registrado y contraseña válida (LOG-08)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "vyvs@mail.com" y la contraseña "hermione2025"
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "El usuario no es correcto."
-
-  Scenario: Inicio de sesión con correo no registrado y contraseña inválida (LOG-09)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "vyvs@mail.com" y la contraseña "123"
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "El usuario no es correcto."
-
-  Scenario: Inicio de sesión con correo de formato inválido y contraseña vacía (LOG-10)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "harry.com" y la contraseña ""
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Por favor, completa ambos campos."
-
-  Scenario: Inicio de sesión con correo de formato inválido y contraseña válida (LOG-11)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "harry.com" y la contraseña "hermione2025"
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Por favor, ingrese un correo electrónico válido."
-
-  Scenario: Inicio de sesión con correo de formato inválido y contraseña inválida (LOG-12)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "harry.com" y la contraseña "123"
-    And presiona el botón de ingresar
-    Then se debe mostrar el mensaje "Por favor, ingrese un correo electrónico válido."
-
-  Scenario: Tres intentos fallidos consecutivos con correo registrado (LOG-13)
-    Given el usuario navega a la página de inicio de sesión "http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html"
-    When el usuario ingresa el correo "ron@hogwarts.com" y la contraseña "123" 3 veces seguidas
-    Then se debe mostrar el mensaje "Usuario correcto, pero la contraseña es incorrecta."
+  Escenario: Tres intentos fallidos consecutivos con correo registrado (LOG-13)
+    Cuando el usuario ingresa el correo "ron@hogwarts.com" y la contraseña "123" 3 veces seguidas
+    Entonces se debe mostrar el mensaje de advertencia de bloqueo "Atención, su cuenta está a punto de ser bloqueada."
