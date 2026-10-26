@@ -1,54 +1,40 @@
 # Proyecto 4: Automatización de Pruebas de Login - Obra Social de Hogwarts
 
-Este proyecto contiene la automatización de los casos de prueba `LOG-01` a `LOG-13` para la pantalla de inicio de sesión de la Obra Social de Hogwarts (`http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html`), utilizando **Cucumber.js** (Gherkin) y **Playwright** con **TypeScript**, siguiendo la arquitectura y buenas prácticas expuestas en la guía de BrowserStack.
+Este proyecto contiene la suite de pruebas automatizadas para la pantalla de inicio de sesión de la Obra Social de Hogwarts (), abarcando los escenarios de prueba  a . Está desarrollado con **Cucumber.js** (Gherkin) y **Playwright** con **TypeScript**.
 
 ## Estructura del Proyecto
 
-```
-.
-├── test/
-│  └──features/
-│  │    └── login.feature      # Escenarios en Gherkin (LOG-01 a LOG-13)
-│  ├── steps/
-│  │   └── loginSteps.ts      # Definiciones de pasos con Playwright
-│  └── support/
-│     ├── world.ts           # Configuración de CustomWorld de Cucumber
-│     └── hooks.ts           # BeforeAll/AfterAll (Browser) y Before/After (Context/Page/Screenshots)
-├── cucumber.json          # Configuración de Cucumber.js y generación de reportes
-├── package.json           # Dependencias y scripts de NPM
-└── README.md              # Guía de instalación y ejecución
-```
 
-## Arquitectura y Patrones (BrowserStack Guide)
 
-- **Optimización del ciclo de vida del navegador (`hooks.ts`)**: Se utiliza `BeforeAll` y `AfterAll` para inicializar el navegador Chromium una sola vez por suite de pruebas, mientras que cada escenario ejecuta un `BrowserContext` y `Page` aislados en los hooks `Before` y `After`.
-- **Captura automática de evidencia (`this.attach`)**: En caso de fallo de un escenario, el hook `After` toma una captura de pantalla y la adjunta directamente al reporte HTML/JSON de Cucumber.
-- **Pasaje de contexto (`world.ts`)**: Se extiende `World` de Cucumber para compartir las instancias de `page`, `context` y `browser` de Playwright entre los distintos *step definitions*.
+## Diseño y Buenas Prácticas
+
+- **Reutilización y Mantenibilidad en Gherkin**: Se utiliza  para evitar repetir el paso de navegación inicial y un  con tabla de  para agrupar las pruebas de errores de validación y credenciales.
+- **Selectores Específicos**: Se emplean únicamente los identificadores reales especificados en la aplicación (, , ,  y ), evitando selectores alternativos genéricos.
+- **Centralización de Configuración**: La URL base del sistema se administra desde  para evitar la duplicación de datos hardcodeados en los escenarios.
+- **Pasos Semánticos**: Las validaciones de redirección y mensajes se manejan en pasos declarativos independientes sin condicionales dentro del código de soporte.
 
 ## Requisitos Previos
 
-- **Node.js**: v18 o superior instalado.
+- **Node.js**: v18 o superior.
 - **NPM**: Gestor de paquetes.
 
-## Pasos para Ejecutar las Pruebas
+## Instrucciones de Ejecución
 
-1. **Instalar dependencias**:
-   ```bash
-   npm install
-   ```
+1. Instalar las dependencias del proyecto:
+   
 
-2. **Instalar navegadores de Playwright**:
-   ```bash
-   npx playwright install chromium
-   ```
+2. Instalar el navegador Chromium para Playwright:
+   
 
-3. **Ejecutar el conjunto de pruebas**:
-   ```bash
-   npm test
-   ```
+3. Ejecutar la suite de pruebas:
+   
 
 ## Reportes Generados
 
-Al finalizar las pruebas, Cucumber genera automáticamente los reportes en la carpeta `reports/`:
-- `cucumber-report.json`: Reporte de ejecución estructurado en JSON.
-- `cucumber-report.html`: Reporte visual interactivo en HTML con capturas de pantalla adjuntas en caso de fallos.
+Al finalizar la ejecución, los reportes se generan automáticamente en la carpeta :
+- : Reporte estructurado en formato JSON.
+- : Reporte interactivo en HTML con capturas de pantalla adjuntas ante fallas.
+
+## Reporte de Defectos del Sistema bajo Prueba (SUT)
+
+- **Falla esperada en LOG-13**: El escenario  ("Tres intentos fallidos consecutivos con correo registrado") falla intencionalmente durante la ejecución. La prueba verifica que tras el tercer intento fallido se muestre el aviso  sobre el elemento  según la especificación requerida. La falla expone un **defecto real en el sistema bajo prueba**, el cual no despliega dicho aviso de advertencia.
