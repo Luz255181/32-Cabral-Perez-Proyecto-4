@@ -6,6 +6,8 @@ export class CustomWorld extends World {
   context!: BrowserContext;
   page!: Page;
 
+  baseUrl: string = 'http://www.cs.uns.edu.ar/~mll/temp/testing/hogwarts/login.html';
+
   constructor(options: IWorldOptions) {
     super(options);
   }

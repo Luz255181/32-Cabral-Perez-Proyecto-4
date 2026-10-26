@@ -2,11 +2,9 @@ import { BeforeAll, AfterAll, Before, After, Status, setDefaultTimeout } from '@
 import { chromium, Browser } from '@playwright/test';
 import { CustomWorld } from './world';
 
-
 setDefaultTimeout(30 * 1000);
 
 let browser: Browser;
-
 
 BeforeAll(async function () {
   browser = await chromium.launch({ headless: true });
