@@ -4,6 +4,8 @@ Este proyecto contiene la suite de pruebas automatizadas para la pantalla de ini
 
 ## Estructura del Proyecto
 
+```text
+.
 ├── test/
 │  └──features/
 │  │    └── login.feature      # Escenarios en Gherkin (LOG-01 a LOG-13)
@@ -15,11 +17,12 @@ Este proyecto contiene la suite de pruebas automatizadas para la pantalla de ini
 ├── cucumber.json          # Configuración de Cucumber.js y generación de reportes
 ├── package.json           # Dependencias y scripts de NPM
 └── README.md              # Guía de instalación y ejecución
+```
 
 ## Diseño y Buenas Prácticas
 
 - **Reutilización y Mantenibilidad en Gherkin**: Se utiliza  para evitar repetir el paso de navegación inicial y un  con tabla de  para agrupar las pruebas de errores de validación y credenciales.
-- **Selectores Específicos**: Se emplean únicamente los identificadores reales especificados en la aplicación (, , ,  y ), evitando selectores alternativos genéricos.
+- **Selectores Específicos**: Se emplean únicamente los identificadores reales especificados en la aplicación (#email, #password, button:has-text("Ingresar"), #error-message y #warning-message), evitando selectores alternativos genéricos.
 - **Centralización de Configuración**: La URL base del sistema se administra desde  para evitar la duplicación de datos hardcodeados en los escenarios.
 - **Pasos Semánticos**: Las validaciones de redirección y mensajes se manejan en pasos declarativos independientes sin condicionales dentro del código de soporte.
 
