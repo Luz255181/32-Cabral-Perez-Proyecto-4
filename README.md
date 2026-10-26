@@ -4,7 +4,17 @@ Este proyecto contiene la suite de pruebas automatizadas para la pantalla de ini
 
 ## Estructura del Proyecto
 
-
+├── test/
+│  └──features/
+│  │    └── login.feature      # Escenarios en Gherkin (LOG-01 a LOG-13)
+│  ├── steps/
+│  │   └── loginSteps.ts      # Definiciones de pasos con Playwright
+│  └── support/
+│     ├── world.ts           # Configuración de CustomWorld de Cucumber
+│     └── hooks.ts           # BeforeAll/AfterAll (Browser) y Before/After (Context/Page/Screenshots)
+├── cucumber.json          # Configuración de Cucumber.js y generación de reportes
+├── package.json           # Dependencias y scripts de NPM
+└── README.md              # Guía de instalación y ejecución
 
 ## Diseño y Buenas Prácticas
 
@@ -20,13 +30,13 @@ Este proyecto contiene la suite de pruebas automatizadas para la pantalla de ini
 
 ## Instrucciones de Ejecución
 
-1. Instalar las dependencias del proyecto:
+1. Instalar las dependencias del proyecto: npm install
    
 
-2. Instalar el navegador Chromium para Playwright:
+2. Instalar el navegador Chromium para Playwright: npx playwright install chromium
    
 
-3. Ejecutar la suite de pruebas:
+3. Ejecutar la suite de pruebas: npm test
    
 
 ## Reportes Generados
