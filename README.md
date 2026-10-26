@@ -1,6 +1,6 @@
 # Proyecto 4: Automatización de Pruebas de Login - Obra Social de Hogwarts
 
-Este proyecto contiene la suite de pruebas automatizadas para la pantalla de inicio de sesión de la Obra Social de Hogwarts (), abarcando los escenarios de prueba  a . Está desarrollado con **Cucumber.js** (Gherkin) y **Playwright** con **TypeScript**.
+Este proyecto contiene la suite de pruebas automatizadas para la pantalla de inicio de sesión de la Obra Social de Hogwarts (*http://www.cs.uns.edu.ar/\~mll/temp/testing/hogwarts/login.html*), abarcando los escenarios de prueba *LOG-01* a *LOG-13*. Está desarrollado con **Cucumber.js** (Gherkin) y **Playwright** con **TypeScript**.
 
 ## Estructura del Proyecto
 
